@@ -8,5 +8,6 @@ My two favorite webs to learn openGL are *[`Learn openGL`](https://learnopengl.c
 I have classified the examples in different directories according to the following classification:
 
 <ul>
-    <li> **grid**: consists of a mesh of points forming a grid that can be static or dynamic. </li>
+    <li> **common**: classes that are used by programs (are not examples). </li>
+    <li> **grid**: mesh of points forming a grid that can be static or dynamic. </li>
 </ul>

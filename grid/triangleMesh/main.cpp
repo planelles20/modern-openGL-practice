@@ -9,8 +9,8 @@
 //#include <GLFW/glfw3.h>
 
 // our class includes
-#include "display.h"
-#include "shader.h"
+#include "../../common/display.h"
+#include "../../common/shader.h"
 #include "mesh.h"
 
 // Window dimensions

@@ -1,4 +1,4 @@
-SUBDIRS = gridExample
+SUBDIRS = grid/triangleMesh
 
 .PHONY: all clean
 
