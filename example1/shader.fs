@@ -1,6 +1,6 @@
 #version 330 core
+
 in vec3 ourPos;
-in vec3 ourColor;
 
 uniform float time;
 

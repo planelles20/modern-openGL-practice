@@ -8,10 +8,6 @@ struct point {
     GLfloat x;
     GLfloat y;
     GLfloat z;
-    //color
-    GLfloat r;
-    GLfloat g;
-    GLfloat b;
 };
 
 class Mesh {

@@ -32,12 +32,8 @@ Mesh::Mesh(const unsigned int X, const unsigned int Y) {
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(*this->indices)*this->numIndices, this->indices, GL_STATIC_DRAW);
 
     // Position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(*this->malla), (GLvoid*)0);
     glEnableVertexAttribArray(0);
-
-    // Color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
-    glEnableVertexAttribArray(1);
 
     //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0); //unbind EBO
     glBindBuffer(GL_ARRAY_BUFFER, 0); // unbind VBO
@@ -74,10 +70,6 @@ void Mesh::CreateMesh(){
             this->malla[j*this->X+i].x = auxi;
             this->malla[j*this->X+i].y = auxj;
             this->malla[j*this->X+i].z = 0.0;
-            //color
-            this->malla[j*this->X+i].r = auxi;
-            this->malla[j*this->X+i].g = auxj;
-            this->malla[j*this->X+i].b = 0.5;
         }
     }
 }
