@@ -1,4 +1,4 @@
-SUBDIRS = grid/triangleMesh fullMesh/example1
+SUBDIRS = example1 example2
 
 .PHONY: all clean
 
