@@ -85,8 +85,4 @@ Shader::~Shader(){
 
 void Shader::Use(){
         glUseProgram(this->Program);
-        // Update time
-        GLfloat timeValue = glfwGetTime();
-        GLint timeLocation = glGetUniformLocation(this->Program, "time");
-        glUniform1f(timeLocation, timeValue);
 }
