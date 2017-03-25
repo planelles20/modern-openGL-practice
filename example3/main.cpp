@@ -9,8 +9,8 @@
 //#include <GLFW/glfw3.h>
 
 // our class includes
-#include "display.h"
-#include "shader.h"
+#include "../common/display.h"
+#include "../common/shader.h"
 #include "mesh.h"
 
 // Window dimensions
@@ -55,6 +55,11 @@ int main()
 
         // use our shader
         ourShader.Use();
+
+        // Update time
+        GLfloat timeValue = glfwGetTime();
+        GLint timeLocation = glGetUniformLocation(ourShader.ThisProgram(), "time");
+        glUniform1f(timeLocation, timeValue);
 
         //draw mesh
         mesh.Draw();
