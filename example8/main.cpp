@@ -35,7 +35,7 @@ int main()
 
 
     // Build and compile our shader program
-    Shader ourShader = Shader("shader.vs", "shader.fs");
+    Shader ourShader = Shader("shader3.vs", "shader2.fs");
 
     // create our mesh grid class
     Mesh mesh = Mesh(Xmesh, Ymesh);
@@ -49,7 +49,7 @@ int main()
 
     //BackGround out of loop
     mesh.BackGround(0.0, 0.0, 0.0, 1.0);
-    
+
     // game loop
     while (display.State())
     {
