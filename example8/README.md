@@ -6,4 +6,4 @@
 
 ## Other examples
 
-*[Video 1 on youtube]()*
+*[Video 1 on youtube](https://www.youtube.com/watch?v=GRuQ17uaSx0&feature=youtu.be)*
