@@ -1,4 +1,4 @@
-SUBDIRS = example1 example2 example3
+SUBDIRS = example1 example2 example3 example4 example5 example6
 
 .PHONY: all clean
 
