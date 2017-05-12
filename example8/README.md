@@ -6,4 +6,6 @@
 
 ## Other examples
 
-*[Video 1 on youtube](https://www.youtube.com/watch?v=GRuQ17uaSx0&feature=youtu.be)*
+*[Video 1 on youtube](https://www.youtube.com/edit?o=U&video_id=6QKdHwffvrM)*
+
+*[Video 2 on youtube](https://www.youtube.com/watch?v=ZM9u-d8zhxk)*
