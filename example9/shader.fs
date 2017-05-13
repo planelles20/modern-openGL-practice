@@ -12,7 +12,7 @@ vec2 prod(vec2 v1, vec2 v2){
 void main()
 {
     //pixel coordenates [-2, 2]
-    vec2 pixel = vec2(4.0*gl_FragCoord.x/1200-2.0, 4.0*gl_FragCoord.y/1000-2.0);
+    vec2 pixel = vec2(4.0*gl_FragCoord.x/1600-2.0, 4.0*gl_FragCoord.y/1000-2.0);
 
     vec2 z = vec2(pixel.x, pixel.y);
 
