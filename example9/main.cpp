@@ -14,7 +14,7 @@
 #include "mesh.h"
 
 // Window dimensions
-const GLuint WIDTH = 1600, HEIGHT = 1000;
+const GLuint WIDTH = 1200, HEIGHT = 800;
 //mesh dimensions
 const unsigned int Xmesh = 2, Ymesh = 2;
 
