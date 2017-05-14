@@ -35,7 +35,7 @@ int main()
 
 
     // Build and compile our shader program
-    Shader ourShader = Shader("shader3.vs", "shader2.fs");
+    Shader ourShader = Shader("shader4.vs", "shader3.fs");
 
     // create our mesh grid class
     Mesh mesh = Mesh(Xmesh, Ymesh);
