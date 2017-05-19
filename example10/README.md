@@ -3,5 +3,5 @@
 In this case we pass color as data.
 
 <p align="center">
-  <img src="https://github.com/planelles20/modern-openGL-practice/blob/master/example10/result/example10.gif?raw=true" alt="grid screenshot figure"/>
+  <img src="https://github.com/planelles20/modern-openGL-practice/blob/master/example10/result/example10.png?raw=true" alt="grid screenshot figure"/>
 </p>

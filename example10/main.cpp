@@ -60,15 +60,22 @@ int main()
 
         // use our shader
         ourShader.Use();
-
         // Create transformations
-        glm::mat4 transform;
-        transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
-        transform = glm::rotate(transform, (GLfloat)glfwGetTime() * 0.5f, glm::vec3(0.0f, 0.0f, 1.0f));
-
-        // Get matrix's uniform location and set matrix
-        GLint transformLoc = glGetUniformLocation(ourShader.ThisProgram(), "transform");
-        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+        glm::mat4 model;
+        glm::mat4 view;
+        glm::mat4 projection;
+        model = glm::rotate(model, -45.0f, glm::vec3(1.0f, 0.0f, 0.0f));
+        view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+        projection = glm::perspective(45.0f, (GLfloat)WIDTH / (GLfloat)HEIGHT, 0.1f, 100.0f);
+        // Get their uniform location
+        GLint modelLoc = glGetUniformLocation(ourShader.ThisProgram(), "model");
+        GLint viewLoc = glGetUniformLocation(ourShader.ThisProgram(), "view");
+        GLint projLoc = glGetUniformLocation(ourShader.ThisProgram(), "projection");
+        // Pass them to the shaders
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+        // Note: currently we set the projection matrix each frame, but since the projection matrix rarely changes it's often best practice to set it outside the main loop only once.
+        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
         //draw mesh
         mesh.Draw();
