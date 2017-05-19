@@ -1,4 +1,4 @@
-# Moving color grid example using GLM library
+# Perpective color grid example using GLM library
 
 In this case we pass color as data.
 
