@@ -18,11 +18,16 @@ const GLuint WIDTH = 1200, HEIGHT = 800;
 //mesh dimensions
 const unsigned int Xmesh = 10, Ymesh = 20;
 
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode) {
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, GL_TRUE);
+}
+
 // Our main program
 int main()
 {
     // create our window
-    Display display = Display(WIDTH, HEIGHT, "LearnOpenGL Carlos Planelles");
+    Display display = Display(WIDTH, HEIGHT, "LearnOpenGL Carlos Planelles", key_callback);
 
     // Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions
     glewExperimental = GL_TRUE;

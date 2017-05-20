@@ -6,11 +6,15 @@
 
 #include <GLFW/glfw3.h>
 
+// GLM Mathematics
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 class Display {
     public:
         //build our window
-        Display(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string& title);
+        Display(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string& title, void (*key_callback)(GLFWwindow*,int,int,int,int));
         virtual ~Display();
         void PollEvents();
         void SwapWindows();
