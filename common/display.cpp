@@ -1,6 +1,9 @@
 #include "display.h"
 
-Display::Display(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string& title, void (*key_callback)(GLFWwindow*,int,int,int,int)) {
+Display::Display(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string& title,
+                 void (*key_callback)(GLFWwindow*,int,int,int,int),
+                 void (*mouse_callback)(GLFWwindow*,double,double),
+                 void (*scroll_callback)(GLFWwindow*,double, double)) {
     // Init GLFW
     glfwInit();
 
@@ -16,6 +19,8 @@ Display::Display(const unsigned int WIDTH, const unsigned int HEIGHT, const std:
 
     // Set the required callback functions
     glfwSetKeyCallback(this->window, key_callback);
+    glfwSetCursorPosCallback(this->window, mouse_callback);
+    glfwSetScrollCallback(this->window, scroll_callback);
 }
 
 Display::~Display(){

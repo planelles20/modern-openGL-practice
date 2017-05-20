@@ -14,7 +14,11 @@
 class Display {
     public:
         //build our window
-        Display(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string& title, void (*key_callback)(GLFWwindow*,int,int,int,int));
+        Display(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string& title,
+                void (*key_callback)(GLFWwindow*,int,int,int,int) = NULL,
+                void (*mouse_callback)(GLFWwindow*,double,double) = NULL,
+                void (*scroll_callback)(GLFWwindow*,double, double) = NULL);
+
         virtual ~Display();
         void PollEvents();
         void SwapWindows();
