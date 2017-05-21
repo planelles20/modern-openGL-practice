@@ -17,7 +17,8 @@ class Display {
         Display(const unsigned int WIDTH, const unsigned int HEIGHT, const std::string& title,
                 void (*key_callback)(GLFWwindow*,int,int,int,int) = NULL,
                 void (*mouse_callback)(GLFWwindow*,double,double) = NULL,
-                void (*scroll_callback)(GLFWwindow*,double, double) = NULL);
+                void (*scroll_callback)(GLFWwindow*,double, double) = NULL,
+                void (*button_mouse_callback)(GLFWwindow*,int, int, int) = NULL);
 
         virtual ~Display();
         void PollEvents();
