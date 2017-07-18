@@ -5,7 +5,7 @@ CLASS_LINK = ../common/display.cpp ../common/shader.cpp
 CC = g++
 
 all:
-	$(CC) $(COMPILER_FLAGS) -o example16.exe main.cpp $(CLASS_LINK) mesh.cpp $(LINKER_FLAGS)
+	$(CC) $(COMPILER_FLAGS) -o example17.exe main.cpp $(CLASS_LINK) mesh.cpp $(LINKER_FLAGS)
 
 clean:
 	rm *.exe
