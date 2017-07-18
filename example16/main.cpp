@@ -27,7 +27,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 int main()
 {
     // create our window
-    Display display = Display(WIDTH, HEIGHT, "LearnOpenGL Carlos Planelles", key_callback);
+    Display display = Display(WIDTH, HEIGHT, "Polar rose, Carlos Planelles", key_callback);
 
     // Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions
     glewExperimental = GL_TRUE;
