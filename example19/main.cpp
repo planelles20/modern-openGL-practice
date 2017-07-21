@@ -47,7 +47,7 @@ void do_movement();
 // Our main program
 int main() {
     // create our window
-    Display display = Display(WIDTH, HEIGHT, "Mesh cube, Carlos Planelles", key_callback);
+    Display display = Display(WIDTH, HEIGHT, "Color cube, Carlos Planelles", key_callback);
 
     // Set this to true so GLEW knows to use a modern approach to retrieving function pointers and extensions
     glewExperimental = GL_TRUE;
