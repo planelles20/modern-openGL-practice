@@ -7,7 +7,9 @@ Mesh::Mesh(const unsigned int X, const unsigned int Y, const unsigned int Z) {
     this->Z = Z;
 
     this->numPoints = X*Y*Z;
-    this->numIndices = (2*3*(this->X-1)*(this->Y-1)*this->Z)+(2*3*this->X*(this->Y-1)*(this->Z-1));
+    this->numIndices = (2*3*(this->X-1)*(this->Y-1)*this->Z)
+                      +(2*3*this->X*(this->Y-1)*(this->Z-1))
+                      +(2*3*(this->X-1)*this->Y*(this->Z-1));
 
     this->malla = new point[this->numPoints];
     this->indices = new GLushort[this->numIndices];
@@ -80,7 +82,7 @@ void Mesh::CreateMesh(){
 
 void Mesh::CreateIndeces(){
     int l = 0;
-    //pararell to floor
+    //normal to z
 	for (int k = 0; k<(this->Z); k++) {
     	for (int j = 0; j<(this->Y-1); j++) {
     		for (int i = 0; i<(this->X-1); i++) {
@@ -95,7 +97,7 @@ void Mesh::CreateIndeces(){
     		}
         }
 	}
-    //normal to floor
+    //normal to x
     for (int i = 0; i<(this->X); i++) {
         for (int k = 0; k<(this->Z-1); k++) {
     	       for (int j = 0; j<(this->Y-1); j++) {
@@ -105,6 +107,21 @@ void Mesh::CreateIndeces(){
     			this->indices[l++] = i+(j+1)*this->X+k*this->X*this->Y;
                 //up triangles
                 this->indices[l++] = i+(j+1)*this->X+(k+1)*this->X*this->Y;
+    			this->indices[l++] = i+j*this->X+(k+1)*this->X*this->Y;
+    			this->indices[l++] = i+j*this->X+k*this->X*this->Y;
+    		}
+        }
+	}
+    //normal to y
+    for (int j = 0; j<(this->Y); j++) {
+        for (int k = 0; k<(this->Z-1); k++) {
+            for (int i = 0; i<(this->X-1); i++) {
+                //down triangles
+    			this->indices[l++] = i+1+j*this->X+(k+1)*this->X*this->Y;
+    			this->indices[l++] = i+j*this->X+k*this->X*this->Y;
+    			this->indices[l++] = i+1+j*this->X+k*this->X*this->Y;
+                //up triangles
+                this->indices[l++] = i+1+j*this->X+(k+1)*this->X*this->Y;
     			this->indices[l++] = i+j*this->X+(k+1)*this->X*this->Y;
     			this->indices[l++] = i+j*this->X+k*this->X*this->Y;
     		}
